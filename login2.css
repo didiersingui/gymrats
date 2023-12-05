@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #48c593; /* Color de fondo */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura del 100% de la ventana */
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+    background-image: url('MicrosoftTeams-image\ \(3\).png'); /* Ruta de la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    min-height: 100vh; /* Garantiza que el contenido ocupe al menos el 100% de la altura de la ventana */
+    position: relative; /* Agrega una posición relativa para que la posición absoluta funcione correctamente */
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif; /* Estilo de fuente para h2 */
+}
+
+.container {
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 20px; /* Relleno interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+    text-align: center; /* Alineación del texto en el centro */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Diseño de columna para el formulario */
+}
+
+label {
+    margin-top: 10px; /* Margen superior para las etiquetas */
+}
+
+input {
+    padding: 8px; /* Relleno interno del campo de entrada */
+    margin-top: 5px; /* Margen superior del campo de entrada */
+    margin-bottom: 15px; /* Margen inferior del campo de entrada */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Diseño de columna para los botones */
+}
+
+button {
+    background-color: #10756d; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px; /* Relleno interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor apuntador al pasar el ratón */
+}
+
+a {
+    color: #5bc0de; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado del enlace */
+    margin-top: 10px; /* Margen superior para los enlaces */
+    cursor: pointer; /* Cursor apuntador al pasar el ratón */
+}
+
+.password-container {
+    position: relative; /* Posición relativa para el contenedor de contraseña */
+}
+
+.toggle-password {
+    position: absolute; /* Posición absoluta para el botón de alternar contraseña */
+    top: 50%; /* Coloca el botón en la mitad superior del contenedor */
+    right: 10px; /* Coloca el botón en el lado derecho del contenedor */
+    transform: translateY(-50%); /* Centra verticalmente el botón */
+    cursor: pointer; /* Cursor apuntador al pasar el ratón */
+    color: #666; /* Color del texto del botón */
+}

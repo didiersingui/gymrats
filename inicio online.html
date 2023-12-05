@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la página -->
+    <title>Tienda</title>
+    <!-- Enlace al archivo de estilo CSS -->
+    <link rel="stylesheet" href="diseñotienda.css" />
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Título principal de la página -->
+        <h1>Tienda</h1>
+
+        <!-- Contenedor de icono de carrito y cantidad de productos en el carrito -->
+        <div class="container-icon">
+            <!-- Contenedor del icono de carrito y la cantidad de productos -->
+            <div class="container-cart-icon">
+                <!-- Icono de carrito -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <!-- Cantidad de productos en el carrito -->
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+
+            <!-- Contenedor de productos en el carrito (inicialmente oculto) -->
+            <div class="container-cart-products hidden-cart">
+                <!-- Fila de un producto en el carrito (inicialmente oculta) -->
+                <div class="row-product hidden">
+                    <!-- Producto en el carrito -->
+                    <div class="cart-product">
+                        <!-- Información del producto en el carrito -->
+                        <div class="info-cart-product">
+                            <!-- Cantidad de productos del mismo tipo en el carrito -->
+                            <span class="cantidad-producto-carrito">1</span>
+                            <!-- Nombre del producto en el carrito -->
+                            <p class="titulo-producto-carrito">LIBRO Muscular</p>
+                            <!-- Precio del producto en el carrito -->
+                            <span class="precio-producto-carrito">$80</span>
+                        </div>
+                        <!-- Icono para quitar el producto del carrito -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Total del carrito (inicialmente oculto) -->
+                <div class="cart-total hidden">
+                    <!-- Título del total del carrito -->
+                    <h3>Total:</h3>
+                    <!-- Monto total a pagar en el carrito -->
+                    <span class="total-pagar">$200</span>
+                </div>
+                <!-- Mensaje cuando el carrito está vacío (inicialmente oculto) -->
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+    </header>
+    <div class="container-items">
+        <!-- Elemento de la tienda -->
+        <div class="item">
+            <!-- Imagen del producto -->
+            <figure>
+                <img src="HIPERTRO.jpg" alt="producto" />
+            </figure>
+            <!-- Información del producto -->
+            <div class="info-producto">
+                <!-- Nombre del producto -->
+                <h2>LIBRO Muscular</h2>
+                <!-- Precio del producto -->
+                <p class="precio">$80</p>
+                <!-- Botón para añadir el producto al carrito -->
+                <button onclick="añadirAlCarrito()">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="powerpaulo.png" alt="producto" />
+            </figure>
+            <div class="info-producto">
+                <h2>PLAN PARA Powerbuilding</h2>
+                <p class="precio">$20</p>
+                <button onclick="añadirAlCarrito()">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="isa.png" alt="producto" />
+            </figure>
+            <div class="info-producto">
+                <h2>PERSONAL TREINER ISA </h2>
+                <p class="precio">$50</p>
+                <button onclick="añadirAlCarrito()">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="team isa.png" alt="producto" />
+            </figure>
+            <div class="info-producto">
+                <h2>UNETE AL TEAM ISA</h2>
+                <p class="precio">$90</p>
+                <button onclick="añadirAlCarrito()">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="MicrosoftTeams-image (3).png" alt="producto" />
+            </figure>
+            <div class="info-producto">
+                <h2>PLAN DE HIPERTROFIA Muscular</h2>
+                <p class="precio">$50</p>
+                <button onclick="añadirAlCarrito()">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Comprar y redireccionar  -->
+    <button class="comprar-button" onclick="redireccionar()">REALIZAR COMPRA</button>
+	<button class="volver-button" onclick="redireccionar2()">volver al inicio</button>
+
+    <script src="javatienda.js"></script>
+</body>
+
+</html>

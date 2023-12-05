@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="diseñocompra.css">
+    <!-- Título de la página -->
+    <title>Registro de Compra</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Título de la sección -->
+        <h2>Registro de Compra</h2>
+        <!-- Formulario de pago con identificador "paymentForm" -->
+        <form id="paymentForm">
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <!-- Campo para el apellido -->
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+
+            <!-- Campo para el correo electrónico -->
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <!-- Campo para el número de tarjeta -->
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="password" id="tarjeta" inputmode="numeric" pattern="[0-9]*" required>
+
+            <!-- Campo para el teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
+
+            <!-- Campo para el nombre del propietario de la tarjeta -->
+            <label for="propietario">Nombre del Propietario de la Tarjeta:</label>
+            <input type="text" id="propietario" required>
+
+            <!-- Contenedor grid para la fecha de expiración y el código postal -->
+            <div class="grid-container">
+                <!-- Campo para la fecha de expiración -->
+                <div>
+                    <label for="expiracion">Fecha de Expiración:</label>
+                    <input type="text" id="expiracion" placeholder="MM/AA" required>
+                </div>
+                <!-- Campo para el código postal -->
+                <div>
+                    <label for="codigo-postal">Código Postal:</label>
+                    <input type="text" id="codigo-postal" required>
+                </div>
+            </div>
+
+            <!-- Campo para la dirección -->
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required>
+
+            <!-- Campo para la ciudad -->
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" required>
+
+            <!-- Campo para el país -->
+            <label for="pais">País:</label>
+            <input type="text" id="pais" required>
+
+            <!-- Campo para la provincia -->
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" required>
+
+            <!-- Botón para realizar la compra -->
+            <button type="button" onclick="realizarCompra()">Realizar Compra</button>
+        </form>
+    </div>
+
+    <!-- Enlace al archivo de script JavaScript -->
+    <script src="javacompra.js"></script>
+</body>
+</html>

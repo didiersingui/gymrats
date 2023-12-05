@@ -1,0 +1,329 @@
+/* Globales */
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estas líneas establecen reglas globales para el modelo de caja, 
+garantizando márgenes y rellenos cero, y el uso de box-sizing para el cálculo del tamaño total del elemento. */
+
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+}
+
+/* Configuración global del cuerpo del documento, 
+estableciendo márgenes, un ancho máximo y una fuente predeterminada para todo el cuerpo del documento. */
+
+/* Modificamos el tamaño y color del icono del carrito */
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #10756d; /* Establecemos el color del icono */
+}
+
+/* Estilizamos el icono del carrito, definiendo su tamaño y color. */
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+/* Cambiamos el cursor al pasar el mouse sobre el icono del carrito, 
+proporcionando una indicación visual de que es interactivo. */
+
+/* Ponemos un límite de anchura máxima en todas las imágenes */
+img{
+    max-width: 100%;
+}
+
+/* Garantizamos que las imágenes no excedan el ancho de sus contenedores. */
+
+/* Con el header ponemos la imagen del icono del carrito al otro extremo de la superficie izquierda */
+header{
+    display: flex;
+    justify-content: space-between; /* Separa el logo del carro con el título de arriba */
+    padding: 30px 0 40px 0;
+}
+
+/* Establecemos el diseño y el espaciado en el encabezado, 
+asegurando que los elementos dentro de él estén distribuidos uniformemente. */
+
+/* Diseño de las compras realizadas del carrito */
+.container-icon{
+    position: relative;
+}
+
+/* Configuración del contenedor del icono del carrito, 
+usando posicionamiento relativo para que sus elementos secundarios se posicionen 
+en relación con este contenedor. */
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #10756d; /* Color de fondo del contador de productos */
+    color: #fff; /* Color del texto del contador de productos */
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Estilo del contador de productos, utilizando posicionamiento absoluto 
+para colocarlo en una posición específica dentro del contenedor principal. */
+
+#contador-productos{
+    font-size: 12px;
+}
+
+/* Establecemos el tamaño de fuente específico para el contador de productos. */
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Establecemos el estilo del contenedor de productos del carrito, 
+usando posicionamiento absoluto para superponerlo sobre otros elementos, 
+junto con sombra y bordes redondeados para efecto visual. */
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(17, 189, 160, 0.2);
+}
+
+/* Configuración del diseño de cada producto en el carrito, 
+asegurando que los elementos internos estén distribuidos correctamente. */
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+} 
+
+/* Establecemos el diseño de la información del producto dentro del carrito, 
+utilizando flexbox para el posicionamiento y la distribución de espacio. */
+
+/* Diseño del carrito de compras */
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+/* Establecemos el tamaño de fuente específico para el título del producto en el carrito. */
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Establecemos el estilo del precio del producto en el carrito, 
+incluyendo el peso de la fuente, tamaño y margen izquierdo. */
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Establecemos el estilo del contador de cantidad del producto en el carrito, 
+especificando el peso de la fuente y el tamaño. */
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+/* Establecemos el tamaño del icono de cierre en el carrito. */
+
+.icon-close:hover{
+    stroke: red; /* Cambia el color al pasar el mouse sobre el ícono de cierre */
+    cursor: pointer;
+}
+
+/* Cambiamos el color del ícono de cierre al pasar el mouse, 
+proporcionando una indicación visual de que es interactivo. */
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+/* Establecemos el diseño del total del carrito, 
+usando flexbox para centrar y distribuir uniformemente los elementos. */
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Establecemos el tamaño y el peso de la fuente para el título del total del carrito. */
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* Establecemos el tamaño y el peso de la fuente para el total a pagar en el carrito. */
+
+.hidden-cart{
+    display: none;
+}
+
+/* Ocultamos inicialmente el carrito estableciendo su visualización en "none". */
+
+/* Main */
+/* Contenedor de los productos */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Establecemos el diseño de los contenedores de productos utilizando 
+una cuadrícula con tres columnas y un espacio de separación de 20 píxeles. */
+
+/* Animaciones de cada caja de compra de producto */
+.item{
+    border-radius: 10px;
+}
+
+/* Establecemos bordes redondeados para cada elemento de producto. */
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+/* Agregamos una sombra al pasar el mouse sobre un producto para dar un efecto visual. */
+
+/* Ajustamos las imágenes de cada item */
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s; /* Tiempo de transición en el efecto de la imagen */
+}
+
+/* Establecemos el tamaño y la forma de las imágenes de los productos, 
+junto con un efecto de transición suave. */
+
+/* Con esto la imagen da el efecto dentro del contenedor sin salirse de la escala */
+.item figure{
+    overflow: hidden;
+}
+
+/* Ocultamos el desbordamiento de las imágenes para que permanezcan dentro del contenedor. */
+
+/* Efecto al pasar el maus por encima de la imagen en el contenedor */
+.item:hover img{
+    transform: scale(1.2);
+}
+
+/* Aumentamos el tamaño de la imagen al pasar el mouse para un efecto visual. */
+
+.info-producto{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Establecemos el relleno, altura de línea y diseño del contenedor de información del producto, 
+utilizando flexbox para el posicionamiento y la distribución de espacio. */
+
+/* Tipo de diseño en la letra del precio */
+.precio{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* Establecemos el tamaño y el peso de la fuente para el precio del producto. */
+
+/* Líneas de diseño del botón de compras de cada caja */
+.info-producto button{
+    border: none;
+    background: none;
+    background-color: #10756d; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+/* Establecemos el diseño del botón de compra, 
+definiendo colores y espaciado, y eliminamos los estilos predeterminados del botón. */
+
+/* Otros estilos existentes ... */
+.comprar-button {
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 500px;
+}
+
+/* Establecemos el diseño del botón de compra, 
+incluyendo relleno, color de fondo, color del texto, bordes redondeados y cursor. */
+
+.comprar-button:hover {
+    background-color: #00b33c; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+/* Cambiamos el color de fondo al pasar el mouse sobre el botón de compra. */
+
+.volver-button {
+    padding: 20px;
+    background-color: #0b2949;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+}
+
+/* Establecemos el diseño del botón de volver, 
+siguiendo los mismos principios que el botón de compra. */
+
+.volver-button:hover {
+    background-color: #e20909; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+/* Cambiamos el color de fondo al pasar el mouse sobre el botón de volver. */
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+/* Establecemos el diseño del mensaje de carrito vacío, 
+configurando el relleno y alineación del texto. */
+
+.hidden{
+    display: none;
+}
+
+/* Ocultamos elementos con la clase "hidden" estableciendo su visualización en "none". */
